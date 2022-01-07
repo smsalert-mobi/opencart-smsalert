@@ -1,0 +1,22 @@
+{
+    "name": "axwell/smsalert-php",
+    "description": "PHP integration for SMSAlert.mobi API SMS Gateway",
+    "type": "library",
+    "require": {
+        "php": "7.4.*",
+        "guzzlehttp/guzzle": "^7.4",
+        "ext-json": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandru Dinu",
+            "email": "contact@smsalert.mobi"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SmsAlert\\": "src/SmsAlert/"
+        }
+    }
+}

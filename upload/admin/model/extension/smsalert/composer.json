@@ -1,0 +1,5 @@
+{
+    "require": {
+        "axwell/smsalert-php": "^1.0"
+    }
+}
