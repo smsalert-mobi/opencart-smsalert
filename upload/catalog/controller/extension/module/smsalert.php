@@ -3,6 +3,23 @@
 class ControllerExtensionModuleSmsAlert extends Controller
 {
 
+    public const DEFAULT_ORDER_STATUS = [
+        'canceled',
+        'reversal',
+        'chargebackd',
+        'complete',
+        'denied',
+        'expired',
+        'failed',
+        'pending',
+        'processed',
+        'processing',
+        'refunded',
+        'reversed',
+        'shipped',
+        'voided',
+    ];
+
     public function status_change($route, $data)
     {
         $orderStatusId = $data[1];
@@ -16,6 +33,17 @@ class ControllerExtensionModuleSmsAlert extends Controller
         $order        = $this->model_checkout_order->getOrder($orderId);
         $statusName   = $this->model_extension_smsalert_order->getStatusName($orderStatusId);
         $isActive     = $this->model_setting_setting->getSettingValue("smsalert_active");
+
+        if (empty($statusName) || !in_array(strtolower($statusName), self::DEFAULT_ORDER_STATUS )) {
+            foreach (self::DEFAULT_ORDER_STATUS as $value) {
+                $id = $this->model_setting_setting->getSettingValue(sprintf('smsalert_%s_status_id', $value));
+
+                if ($id == $orderStatusId) {
+                    $statusName = $value;
+                    break;
+                }
+            }
+        }
 
         if ($this->isModuleEnabled() && !empty($isActive) && !empty($statusName)) {
             $statusName     = str_replace(" ", "_", $statusName);

@@ -24,45 +24,59 @@ class ControllerExtensionModuleSmsAlert extends Controller
 
         "smsalert_canceled_active"  => ["value" => ""],
         "smsalert_canceled_message" => ["value" => ""],
+        "smsalert_canceled_status_id" => ["value" => ""],
 
         "smsalert_canceled_reversal_active"  => ["value" => ""],
         "smsalert_canceled_reversal_message" => ["value" => ""],
+        "smsalert_canceled_reversal_status_id" => ["value" => ""],
 
         "smsalert_chargeback_active"  => ["value" => ""],
         "smsalert_chargeback_message" => ["value" => ""],
+        "smsalert_chargeback_status_id" => ["value" => ""],
 
         "smsalert_complete_active"  => ["value" => ""],
         "smsalert_complete_message" => ["value" => ""],
+        "smsalert_complete_status_id" => ["value" => ""],
 
         "smsalert_denied_active"  => ["value" => ""],
         "smsalert_denied_message" => ["value" => ""],
+        "smsalert_denied_status_id" => ["value" => ""],
 
         "smsalert_refunded_active"  => ["value" => ""],
         "smsalert_refunded_message" => ["value" => ""],
+        "smsalert_refunded_status_id" => ["value" => ""],
 
         "smsalert_expired_active"  => ["value" => ""],
         "smsalert_expired_message" => ["value" => ""],
+        "smsalert_expired_status_id" => ["value" => ""],
 
         "smsalert_failed_active"  => ["value" => ""],
         "smsalert_failed_message" => ["value" => ""],
+        "smsalert_failed_status_id" => ["value" => ""],
 
         "smsalert_pending_active"  => ["value" => ""],
         "smsalert_pending_message" => ["value" => ""],
+        "smsalert_pending_status_id" => ["value" => ""],
 
         "smsalert_processed_active"  => ["value" => ""],
         "smsalert_processed_message" => ["value" => ""],
+        "smsalert_processed_status_id" => ["value" => ""],
 
         "smsalert_processing_active"  => ["value" => ""],
         "smsalert_processing_message" => ["value" => ""],
+        "smsalert_processing_status_id" => ["value" => ""],
 
         "smsalert_reversed_active"  => ["value" => ""],
         "smsalert_reversed_message" => ["value" => ""],
+        "smsalert_reversed_status_id" => ["value" => ""],
 
         "smsalert_shipped_active"  => ["value" => ""],
         "smsalert_shipped_message" => ["value" => ""],
+        "smsalert_shipped_status_id" => ["value" => ""],
 
         "smsalert_voided_active"  => ["value" => ""],
         "smsalert_voided_message" => ["value" => ""],
+        "smsalert_voided_status_id" => ["value" => ""],
     ];
 
     public function index()
@@ -127,7 +141,6 @@ class ControllerExtensionModuleSmsAlert extends Controller
         $data['btn_status_order_shipped']           = $this->language->get('btn_status_order_shipped');
         $data['btn_status_order_voided']            = $this->language->get('btn_status_order_voided');
 
-        $data['order_status_list']    = $this->order_status_list;  // ??
         $data['smsalert_test_result'] = $this->testResult;
 
         # common template
@@ -163,7 +176,7 @@ class ControllerExtensionModuleSmsAlert extends Controller
                 }
 
                 if (empty($this->error)) {
-                    $this->saveFiledsToDB();
+                    $this->saveFieldsToDB();
                     $fields = $this->getFieldsValue();
 
                     $message = 'Test opencart SMS message with SMSAlert.mobi';
@@ -180,7 +193,7 @@ class ControllerExtensionModuleSmsAlert extends Controller
 
                 $this->validateFields();
                 if (empty($this->error)) {
-                    $this->saveFiledsToDB();
+                    $this->saveFieldsToDB();
                 }
             }
 
@@ -201,7 +214,7 @@ class ControllerExtensionModuleSmsAlert extends Controller
         }
     }
 
-    public function saveFiledsToDB()
+    public function saveFieldsToDB()
     {
         $fields = $this->getPostFiles();
 

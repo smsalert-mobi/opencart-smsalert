@@ -21,6 +21,7 @@ $_['btn_apiKey_description'] = 'SMSAlert TOKEN DIN CONTUL TAU: https://smsalert.
 $_['btn_token_save_all'] = 'SALVEAZA';
 
 $_['btn_status_order_description'] = 'VARIABILE: {order_number}, {order_date}, {order_total}, {billing_first_name}, {billing_last_name}, {shipping_method}';
+$_['btn_order_mapping_description'] = 'In cazul in care denumirea de baza in engleza a campurior de status a fost alterata va trebui sa identificati si sa setati noul ID de status comanda';
 
 $_['btn_status_order_canceled']          = "Comanda - Anulata";
 $_['btn_status_order_canceled_reversal'] = "Comanda - Reversare Anulata";

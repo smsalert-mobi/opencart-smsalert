@@ -25,6 +25,7 @@ $_['btn_username_description'] = 'Your account username';
 $_['btn_token_save_all'] = 'SAVE';
 
 $_['btn_status_order_description'] = 'VARIABLES AVAILABLE: {order_number}, {order_date}, {order_total}, {billing_first_name}, {billing_last_name}, {shipping_method}';
+$_['btn_order_mapping_description'] = 'If the basic name in English of the status field has been altered, you will have to identify and set the new command status ID';
 
 $_['btn_status_order_canceled']          = "Order - Canceled";
 $_['btn_status_order_canceled_reversal'] = "Order - Canceled Reversal";

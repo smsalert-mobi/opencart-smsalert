@@ -110,6 +110,14 @@
                     </div>
 
                     <div class="group">
+                        <label>Order status ID - {{ btn_status_order_canceled }}</label>
+                        <input type="number" value="7" name="smsalert_canceled_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
                         <label>{{ btn_status_order_canceled_reversal }}</label>
                         <input type="checkbox" name="smsalert_canceled_reversal_active"
                                value="true" {{ smsalert_canceled_reversal_active == true ?  'checked="checked"' : '' }}>
@@ -117,6 +125,14 @@
                                   value="{{ smsalert_canceled_reversal_message == true ?  smsalert_canceled_reversal_message : '' }}">{{ smsalert_canceled_reversal_message == true ?  smsalert_canceled_reversal_message : '' }}</textarea>
                         <div class="description">
                             <p>{{ btn_status_order_description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <label>Order status ID - {{ btn_status_order_canceled_reversal }}</label>
+                        <input type="number" value="{{ smsalert_canceled_reversal_status_id ? smsalert_canceled_reversal_status_id : '9' }}" name="smsalert_canceled_reversal_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
                         </div>
                     </div>
 
@@ -132,6 +148,14 @@
                     </div>
 
                     <div class="group">
+                        <label>Order status ID - {{ btn_status_order_chargebackd }}</label>
+                        <input type="number" value="{{ smsalert_chargeback_status_id ? smsalert_chargeback_status_id : "13" }}" name="smsalert_chargeback_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
                         <label>{{ btn_status_order_complete }}</label>
                         <input type="checkbox" name="smsalert_complete_active"
                                value="true" {{ smsalert_complete_active == true ?  'checked="checked"' : '' }}>
@@ -139,6 +163,14 @@
                                   value="{{ smsalert_complete_message == true ?  smsalert_complete_message : '' }}">{{ smsalert_complete_message == true ?  smsalert_complete_message : '' }}</textarea>
                         <div class="description">
                             <p>{{ btn_status_order_description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <label>Order status ID - {{ btn_status_order_complete }}</label>
+                        <input type="number" value="{{ smsalert_complete_status_id ? smsalert_complete_status_id : "5" }}" name="smsalert_complete_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
                         </div>
                     </div>
 
@@ -154,6 +186,14 @@
                     </div>
 
                     <div class="group">
+                        <label>Order status ID - {{ btn_status_order_denied }}</label>
+                        <input type="number" value="8" name="smsalert_denied_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
                         <label>{{ btn_status_order_refunded }}</label>
                         <input type="checkbox" name="smsalert_refunded_active"
                                value="true" {{ smsalert_refunded_active == true ?  'checked="checked"' : '' }}>
@@ -161,6 +201,14 @@
                                   value="{{ smsalert_refunded_message == true ?  smsalert_refunded_message : '' }}">{{ smsalert_refunded_message == true ?  smsalert_refunded_message : '' }}</textarea>
                         <div class="description">
                             <p>{{ btn_status_order_description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <label>Order status ID - {{ btn_status_order_refunded }}</label>
+                        <input type="number" value="{{ smsalert_refunded_status_id ? smsalert_refunded_status_id : "11" }}" name="smsalert_refunded_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
                         </div>
                     </div>
 
@@ -176,6 +224,14 @@
                     </div>
 
                     <div class="group">
+                        <label>Order status ID - {{ btn_status_order_expired }}</label>
+                        <input type="number" value="{{ smsalert_expired_status_id ? smsalert_expired_status_id : "14" }}" name="smsalert_expired_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
                         <label>{{ btn_status_order_failed }}</label>
                         <input type="checkbox" name="smsalert_failed_active"
                                value="true" {{ smsalert_failed_active == true ?  'checked="checked"' : '' }}>
@@ -183,6 +239,14 @@
                                   value="{{ smsalert_failed_message == true ?  smsalert_failed_message : '' }}">{{ smsalert_failed_message == true ?  smsalert_failed_message : '' }}</textarea>
                         <div class="description">
                             <p>{{ btn_status_order_description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <label>Order status ID - {{ btn_status_order_failed }}</label>
+                        <input type="number" value="{{ smsalert_failed_status_id ? smsalert_failed_status_id : "10" }}" name="smsalert_failed_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
                         </div>
                     </div>
 
@@ -198,6 +262,14 @@
                     </div>
 
                     <div class="group">
+                        <label>Order status ID - {{ btn_status_order_pending }}</label>
+                        <input type="number" value="{{ smsalert_pending_status_id ? smsalert_pending_status_id : "1" }}" name="smsalert_pending_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
                         <label>{{ btn_status_order_processed }}</label>
                         <input type="checkbox" name="smsalert_processed_active"
                                value="true" {{ smsalert_processed_active == true ?  'checked="checked"' : '' }}>
@@ -209,13 +281,29 @@
                     </div>
 
                     <div class="group">
+                        <label>Order status ID - {{ btn_status_order_processed }}</label>
+                        <input type="number" value="{{ smsalert_processed_status_id ? smsalert_processed_status_id : "15" }}" name="smsalert_processed_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
                         <label>{{ btn_status_order_processing }}</label>
                         <input type="checkbox" name="smsalert_processing_active"
                                value="true" {{ smsalert_processing_active == true ?  'checked="checked"' : '' }}>
                         <textarea name="smsalert_processing_message"
                                   value="{{ smsalert_processing_message == true ?  smsalert_processing_message : '' }}">{{ smsalert_processing_message == true ?  smsalert_processing_message : '' }}</textarea>
                         <div class="description">
-                            <p>{{ btn_status_order_description }}</p>
+                            <p>{{ btn_status_order_processing }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <label>Order status ID - {{ btn_status_order_canceled }}</label>
+                        <input type="number" value="{{ smsalert_processing_status_id ? smsalert_processing_status_id : "2" }}" name="smsalert_processing_status_id">
+                        <div class="description">
+                            <p>{{ btn_status_order_canceled }}</p>
                         </div>
                     </div>
 
@@ -226,7 +314,15 @@
                         <textarea name="smsalert_refunded_message"
                                   value="{{ smsalert_refunded_message == true ?  smsalert_refunded_message : '' }}">{{ smsalert_refunded_message == true ?  smsalert_refunded_message : '' }}</textarea>
                         <div class="description">
-                            <p>{{ btn_status_order_description }}</p>
+                            <p>{{ btn_status_order_refunded }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <label>Order status ID - {{ btn_status_order_refunded }}</label>
+                        <input type="number" value="{{ smsalert_refunded_status_id ? smsalert_refunded_status_id : "11" }}" name="smsalert_refunded_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
                         </div>
                     </div>
 
@@ -235,9 +331,17 @@
                         <input type="checkbox" name="smsalert_reversed_active"
                                value="true" {{ smsalert_reversed_active == true ?  'checked="checked"' : '' }}>
                         <textarea name="smsalert_reversed_message"
-                                  value="{{ smsalert_reversed_message == true ?  smsalert_reversed_message : '' }}">{{ smsalert_reversed_message == true ?  smsalert_reversed_message : '' }}</textarea>
+                                  value="{{ smsalert_reversed_message == true ? smsalert_reversed_message : '' }}">{{ smsalert_reversed_message == true ?  smsalert_reversed_message : '' }}</textarea>
                         <div class="description">
                             <p>{{ btn_status_order_description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <label>Order status ID - {{ btn_status_order_reversed }}</label>
+                        <input type="number" value="{{ smsalert_reversed_status_id ? smsalert_reversed_status_id : "12" }}" name="smsalert_reversed_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
                         </div>
                     </div>
 
@@ -253,6 +357,14 @@
                     </div>
 
                     <div class="group">
+                        <label>Order status ID - {{ btn_status_order_shipped }}</label>
+                        <input type="number" value="{{ smsalert_shipped_status_id ? smsalert_shipped_status_id : "3" }}" name="smsalert_shipped_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
                         <label>{{ btn_status_order_voided }}</label>
                         <input type="checkbox" name="smsalert_voided_active"
                                value="true" {{ smsalert_voided_active == true ?  'checked="checked"' : '' }}>
@@ -262,6 +374,15 @@
                             <p>{{ btn_status_order_description }}</p>
                         </div>
                     </div>
+
+                    <div class="group">
+                        <label>Order status ID - {{ btn_status_order_voided }}</label>
+                        <input type="number" value="{{ smsalert_voided_status_id ? smsalert_voided_status_id : "16" }}" name="smsalert_voided_status_id">
+                        <div class="description">
+                            <p>{{ btn_order_mapping_description }}</p>
+                        </div>
+                    </div>
+
                     <input type="submit" name="smsalert_save_settings" value="{{ btn_token_save_all }}">
                 </form>
             </div>
